@@ -33,6 +33,7 @@ body {
     background: #020617;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 999;
 }
 
@@ -53,6 +54,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .home-content span {
@@ -193,4 +195,64 @@ footer {
     background: #020617;
     padding: 20px;
     text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .home {
+        gap: 20px;
+    }
+
+    .home-img img {
+        width: 230px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 100px 7%;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 200px;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    .btn,
+    .btn-outline {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .floating-buttons a {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
 }
