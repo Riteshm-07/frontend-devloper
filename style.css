@@ -1,3 +1,5 @@
+/* ================= GLOBAL ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: #0f172a;
-    color: #fff;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Top Social Icons */
+body {
+    background: #0f172a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ================= TOP SOCIAL ================= */
+
 .top-social {
     position: fixed;
     top: 20px;
@@ -22,9 +30,15 @@ body {
     color: #38bdf8;
     font-size: 22px;
     margin-left: 15px;
+    transition: 0.3s;
 }
 
-/* Header */
+.top-social a:hover {
+    color: #ffffff;
+}
+
+/* ================= HEADER ================= */
+
 .header {
     position: fixed;
     top: 0;
@@ -37,18 +51,29 @@ body {
     z-index: 999;
 }
 
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
+.header h2 {
+    color: #38bdf8;
 }
 
-/* Sections */
+nav a {
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ================= SECTIONS ================= */
+
 section {
     padding: 120px 10%;
 }
 
-/* Home */
+/* ================= HOME ================= */
+
 .home {
     min-height: 100vh;
     display: flex;
@@ -57,8 +82,17 @@ section {
     gap: 40px;
 }
 
+.home-content h1 {
+    font-size: 40px;
+}
+
 .home-content span {
     color: #38bdf8;
+}
+
+.home-content p {
+    margin-top: 10px;
+    opacity: 0.8;
 }
 
 .home-img img {
@@ -67,7 +101,8 @@ section {
     border: 4px solid #38bdf8;
 }
 
-/* Buttons */
+/* ================= BUTTONS ================= */
+
 .btn-group {
     margin-top: 25px;
     display: flex;
@@ -80,7 +115,13 @@ section {
     background: #38bdf8;
     border: none;
     border-radius: 5px;
+    color: #020617;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
 }
 
 .btn-outline {
@@ -89,20 +130,29 @@ section {
     color: #38bdf8;
     text-decoration: none;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
-/* Stats */
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #020617;
+}
+
+/* ================= STATS ================= */
+
 .stats {
     margin-top: 20px;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .stats i {
     color: #38bdf8;
+    margin-right: 6px;
 }
 
-/* About / Contact */
+/* ================= ABOUT / CONTACT ================= */
+
 .about p,
 .contact p {
     max-width: 700px;
@@ -114,7 +164,8 @@ section {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
 }
 
-/* Skills */
+/* ================= SKILLS ================= */
+
 .skill-list {
     margin-top: 30px;
     display: flex;
@@ -137,18 +188,12 @@ section {
     transform: translateY(-5px);
 }
 
-/* Projects Page */
-.projects-page {
-    min-height: 100vh;
-    padding: 120px 10%;
-    display: none;
-    text-align: center;
-}
+/* ================= PROJECTS ================= */
 
 .projects-grid {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -159,6 +204,7 @@ section {
     color: #38bdf8;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .project-btn:hover {
@@ -166,7 +212,8 @@ section {
     color: #020617;
 }
 
-/* Floating Buttons */
+/* ================= FLOATING BUTTONS ================= */
+
 .floating-buttons {
     position: fixed;
     right: 25px;
@@ -188,34 +235,42 @@ section {
     border-radius: 50%;
     font-size: 18px;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    transition: 0.3s;
 }
 
-/* Footer */
+.floating-buttons a:hover {
+    transform: scale(1.1);
+}
+
+/* ================= FOOTER ================= */
+
 footer {
     background: #020617;
     padding: 20px;
     text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 /* ================= RESPONSIVE ================= */
 
 /* Tablet */
 @media (max-width: 1024px) {
-    .home {
-        gap: 20px;
-    }
-
     .home-img img {
         width: 230px;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
     }
 }
 
 /* Mobile */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 
     .header {
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
         text-align: center;
     }
 
@@ -224,7 +279,7 @@ footer {
     }
 
     section {
-        padding: 50px 7%;
+        padding: 100px 7%;
     }
 
     .home {
@@ -248,6 +303,7 @@ footer {
 
     .stats {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .floating-buttons a {
@@ -256,5 +312,3 @@ footer {
         font-size: 16px;
     }
 }
-
-
