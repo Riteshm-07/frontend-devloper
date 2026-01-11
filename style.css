@@ -211,7 +211,7 @@ footer {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
 
     .header {
         flex-direction: column;
@@ -224,7 +224,7 @@ footer {
     }
 
     section {
-        padding: 100px 7%;
+        padding: 50px 7%;
     }
 
     .home {
@@ -256,4 +256,5 @@ footer {
         font-size: 16px;
     }
 }
+
 
